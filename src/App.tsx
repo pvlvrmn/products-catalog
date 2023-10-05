@@ -1,9 +1,10 @@
+import Header from "./Components/Header/Header.tsx";
 
 function App() {
 
   return (
     <>
-      hi
+      <Header/>
     </>
   )
 }
