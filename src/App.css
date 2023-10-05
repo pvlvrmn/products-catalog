@@ -24,7 +24,24 @@ body {
 .header__search {
     float: right;
     height: 80px;
-    margin-top: 15px;
+    margin-top: 16px;
     padding: 0 20px;
     width: 400px;
+}
+
+.header__suggest {
+    background: var(--g-color-base-background);
+    padding: 20px;
+    border: 1px solid var(--g-color-base-generic);
+    border-radius: var(--g-border-radius-xl);
+    position: absolute;
+    width: 360px;
+    right: 20px;
+    top: 70px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.header__suggest .yc-list__item {
+    padding: 10px;
 }
