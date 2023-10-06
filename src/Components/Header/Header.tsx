@@ -23,7 +23,7 @@ function Header() {
           });
           return tmp;
         }).then(val => setSuggest(val));
-      }, 300);
+      }, 100);
     } else {
       setSuggest([]);
     }
