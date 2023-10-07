@@ -13,7 +13,7 @@ function Categories() {
   }, []);
 
   return (
-    <div>
+    <div className='categories__wrapper'>
       {isMenuShow && <Menu size='xl'>
         {catList.map(val => <Menu.Item key={val}>{val}</Menu.Item>)}
       </Menu>}
