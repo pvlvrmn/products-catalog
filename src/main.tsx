@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import {Provider} from "react-redux";
+import './App.css';
 import '@gravity-ui/uikit/styles/fonts.css';
 import '@gravity-ui/uikit/styles/styles.css';
 import {ThemeProvider} from '@gravity-ui/uikit';
 import {configure} from '@gravity-ui/uikit';
-import './App.css';
+import App from './App.tsx'
+import store from './slices/index.ts';
 
 configure({
   lang: 'ru',
@@ -14,7 +16,9 @@ configure({
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <ThemeProvider theme='dark'>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </ThemeProvider>
 )

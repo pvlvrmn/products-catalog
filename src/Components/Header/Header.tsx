@@ -4,11 +4,16 @@ import {TextInput} from "@gravity-ui/uikit";
 import {List} from "@gravity-ui/uikit";
 import {searchAutocomplete} from "../../api";
 import {Bars} from "@gravity-ui/icons"
+import {useDispatch, useSelector} from "react-redux";
+import {toggle} from "../../slices/menuSlice.ts";
 
 function Header() {
   const [query, setQuery] = useState('');
   const [suggest, setSuggest] = useState([]);
   const timerDebounceRef = useRef();
+
+  const isMenuShow = useSelector((state) => state.menu.isMenuShow);
+  const dispatch = useDispatch();
 
   function handleDebounceSearch(e: React.ChangeEvent<any>){
     setQuery(e.target.value);
@@ -33,7 +38,7 @@ function Header() {
   return (
     <header className='header__wrapper'>
       <div className='header__bars'>
-        <Bars/>
+        <Bars onClick={() => dispatch(toggle())}/>
       </div>
       <div className='header__title'>
         <Text variant="display-1" color="inherit" ellipsis>Products Shop</Text>

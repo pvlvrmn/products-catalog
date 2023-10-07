@@ -12,6 +12,7 @@ body {
     height: 80px;
     line-height: 86px;
     padding: 0 20px;
+    cursor: pointer;
 }
 
 .header__wrapper {
