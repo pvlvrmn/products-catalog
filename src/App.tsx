@@ -1,5 +1,5 @@
 import Header from "./Components/Header/Header.tsx";
-import Categories from "./Components/Categories/Categories.tsx";
+import Categories from "./Components/Catalog/Categories.tsx";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {

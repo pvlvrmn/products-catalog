@@ -7,15 +7,21 @@ body {
     display: block;
 }
 
+.header__bars {
+    float: left;
+    height: 80px;
+    line-height: 86px;
+    padding: 0 20px;
+}
+
 .header__wrapper {
     width: 100vw;
     height: 80px;
-    background: white;
+    background: var(--g-color-base-background);
     border-bottom: 1px solid var(--g-color-base-generic-medium);
 }
 
 .header__title {
-    padding: 0 20px;
     height: 80px;
     line-height: 90px;
     float: left;

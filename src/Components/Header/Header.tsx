@@ -3,6 +3,7 @@ import {Text} from '@gravity-ui/uikit';
 import {TextInput} from "@gravity-ui/uikit";
 import {List} from "@gravity-ui/uikit";
 import {searchAutocomplete} from "../../api";
+import {Bars} from "@gravity-ui/icons"
 
 function Header() {
   const [query, setQuery] = useState('');
@@ -31,6 +32,9 @@ function Header() {
 
   return (
     <header className='header__wrapper'>
+      <div className='header__bars'>
+        <Bars/>
+      </div>
       <div className='header__title'>
         <Text variant="display-1" color="inherit" ellipsis>Products Shop</Text>
       </div>
