@@ -18,3 +18,9 @@ export const getCategories = async () => {
       .join(' ')
     );
 }
+
+export const getProducts = async (page:number = 0) => {
+  const data = await fetch(`${urlBase}/products?limit=12&skip=${(page - 1)*12}`);
+  const jsonData = await data.json();
+  return jsonData;
+}
