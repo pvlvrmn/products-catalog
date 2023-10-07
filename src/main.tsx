@@ -12,7 +12,7 @@ configure({
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <ThemeProvider theme='light'>
+  <ThemeProvider theme='dark'>
     <React.StrictMode>
       <App />
     </React.StrictMode>
