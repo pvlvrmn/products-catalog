@@ -16,11 +16,18 @@ export const getCategories = async () => {
     .map(x => x.split(' ')
       .map(y => y[0].toUpperCase() + y.substring(1))
       .join(' ')
-    );
+    )
+    .map(x => ({title: x, selected: false}))
 }
 
-export const getProducts = async (page:number = 0) => {
-  const data = await fetch(`${urlBase}/products?limit=12&skip=${(page - 1)*12}`);
-  const jsonData = await data.json();
-  return jsonData;
+export const getProducts = async (page:number = 0, category:string = '') => {
+  if (category === 'All') {
+    const data = await fetch(`${urlBase}/products?limit=12&skip=${(page - 1) * 12}`);
+    const jsonData = await data.json();
+    return jsonData;
+  } else {
+    const data = await fetch(`${urlBase}/products/category/${category.replace(' ', '-').toLowerCase()}?limit=12&skip=${(page - 1) * 12}`);
+    const jsonData = await data.json();
+    return jsonData;
+  }
 }
