@@ -2,7 +2,7 @@ import {useState, useRef, useEffect} from "react";
 import {Text} from '@gravity-ui/uikit';
 import {TextInput} from "@gravity-ui/uikit";
 import {List} from "@gravity-ui/uikit";
-import {searchAutocomplete} from "../../api/search.ts";
+import {searchAutocomplete} from "../../api";
 
 function Header() {
   const [query, setQuery] = useState('');
