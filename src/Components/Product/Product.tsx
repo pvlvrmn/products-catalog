@@ -6,7 +6,6 @@ import Images from "./Images.tsx";
 import {hide} from "../../slices/menuSlice.ts";
 import {Button, Text} from "@gravity-ui/uikit";
 import {StarFill} from '@gravity-ui/icons';
-import {ShoppingBag} from '@gravity-ui/icons';
 
 
 function Product() {

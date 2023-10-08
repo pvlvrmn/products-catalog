@@ -1,10 +1,10 @@
-import {useState, useRef, useEffect} from "react";
+import {useState, useRef} from "react";
 import {Text} from '@gravity-ui/uikit';
 import {TextInput} from "@gravity-ui/uikit";
 import {List} from "@gravity-ui/uikit";
-import {searchAutocomplete} from "../../api";
+import {getIdBySearchResults, searchAutocomplete} from "../../api";
 import {Bars} from "@gravity-ui/icons"
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {toggle} from "../../slices/menuSlice.ts";
 import {set} from "../../slices/categorySlice.ts";
 import {useNavigate} from "react-router-dom";
@@ -15,10 +15,9 @@ function Header() {
   const timerDebounceRef = useRef();
   const navigate = useNavigate();
 
-  const isMenuShow = useSelector((state) => state.menu.isMenuShow);
   const dispatch = useDispatch();
 
-  function handleDebounceSearch(e: React.ChangeEvent<any>){
+  function handleDebounceSearch(e: React.FormEvent<HTMLInputElement>){
     setQuery(e.target.value);
     if(e.target.value !== '') {
       if(timerDebounceRef.current){
@@ -38,6 +37,12 @@ function Header() {
     }
   }
 
+  const handleSearchClick = (item: string) => {
+    getIdBySearchResults(item)
+      .then(id => navigate(`/product/${id}`))
+      .then(() => setQuery(''))
+  }
+
   return (
     <header className='header__wrapper'>
       <div className='header__bars' onClick={() => dispatch(toggle())}>
@@ -52,7 +57,7 @@ function Header() {
       </div>
       {Boolean(suggest.length) &&
       <div className='header__suggest'>
-         <List items={suggest} filterable={false} size='xl' virtualized={false}/>
+         <List items={suggest} filterable={false} size='xl' virtualized={false} onItemClick={handleSearchClick}/>
       </div>
       }
     </header>

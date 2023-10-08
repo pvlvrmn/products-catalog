@@ -8,6 +8,14 @@ export const searchAutocomplete = async (query: string) => {
   return jsonData.products;
 };
 
+export const getIdBySearchResults = async (query: string) => {
+  const data = await fetch(`${urlBase}/products/search?q=${query}`, {
+    method: 'GET',
+  });
+  const jsonData = await data.json();
+  return jsonData.products[0].id;
+}
+
 export const getCategories = async () => {
   const data = await fetch(`${urlBase}/products/categories`)
   const jsonData = await data.json();
