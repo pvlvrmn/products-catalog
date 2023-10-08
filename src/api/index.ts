@@ -31,3 +31,9 @@ export const getProducts = async (page:number = 0, category:string = '') => {
     return jsonData;
   }
 }
+
+export const getProductById = async (id: number) => {
+  const data = await fetch(`${urlBase}/products/${id}`);
+  const jsonData = await data.json();
+  return jsonData;
+}

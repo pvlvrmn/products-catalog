@@ -3,12 +3,14 @@ import {getCategories} from "../../api";
 import {Menu} from "@gravity-ui/uikit";
 import {useDispatch, useSelector} from "react-redux";
 import {set} from "../../slices/categorySlice.ts";
+import {useNavigate} from "react-router-dom";
 
 function Categories() {
   const [catList, setCatList] = useState([]);
   const isMenuShow = useSelector((state) => state.menu.isMenuShow);
   const currCategory = useSelector((state) => state.category.category);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const tmpCatList = [];
@@ -19,6 +21,7 @@ function Categories() {
 
   const handleClick = (e) => {
     dispatch(set(e.target.textContent));
+    navigate('/category/'+(e.target.textContent).toLowerCase().replace(' ', '-'))
     /*setCatList((prev) => {
       console.log(prev);
       return [...prev.map(x => {
