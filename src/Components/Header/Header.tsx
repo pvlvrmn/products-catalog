@@ -40,8 +40,8 @@ function Header() {
 
   return (
     <header className='header__wrapper'>
-      <div className='header__bars'>
-        <Bars onClick={() => dispatch(toggle())}/>
+      <div className='header__bars' onClick={() => dispatch(toggle())}>
+        <Bars/>
       </div>
       <div className='header__title' onClick={() => {navigate('/'); dispatch(set('All'))}}>
         <Text variant="display-1" color="inherit" ellipsis>Products Shop</Text>
