@@ -1,6 +1,10 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-const initialState = {
+interface MenuState {
+  isMenuShow: boolean
+}
+
+const initialState: MenuState = {
   isMenuShow: true,
 };
 

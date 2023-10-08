@@ -10,8 +10,8 @@ import {set} from "../../slices/categorySlice.ts";
 import {useNavigate} from "react-router-dom";
 
 function Header() {
-  const [query, setQuery] = useState('');
-  const [suggest, setSuggest] = useState([]);
+  const [query, setQuery] = useState<string>('');
+  const [suggest, setSuggest] = useState<Array<string>>([]);
   const timerDebounceRef = useRef();
   const navigate = useNavigate();
 
