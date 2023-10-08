@@ -1,6 +1,10 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
-const initialState = {
+interface CategoryState {
+  category: string
+}
+
+const initialState: CategoryState = {
   category: 'All',
 };
 
@@ -8,7 +12,7 @@ const categorySlice = createSlice({
   name: 'category',
   initialState,
   reducers: {
-    set: (state, action) => {
+    set: (state, action: PayloadAction<string>) => {
       state.category = action.payload;
     }
   }

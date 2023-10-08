@@ -7,7 +7,7 @@ import '@gravity-ui/uikit/styles/styles.css';
 import {ThemeProvider} from '@gravity-ui/uikit';
 import {configure} from '@gravity-ui/uikit';
 import App from './App.tsx'
-import store from './slices/index.ts';
+import {store} from './slices/index.ts';
 
 configure({
   lang: 'ru',
