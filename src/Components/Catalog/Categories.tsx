@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 
 function Categories() {
   const [catList, setCatList] = useState([]);
-  const isMenuShow = useSelector((state) => state.menu.isMenuShow);
+  const isMenuShow = useSelector((state: boolean) => state.menu.isMenuShow);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ function Categories() {
     });
   }, []);
 
-  const handleClick = (e: React.FormEvent<HTMLInputElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     dispatch(set(e.target.textContent));
     navigate('/category/'+(e.target.textContent).toLowerCase().replace(' ', '-'))
   }
