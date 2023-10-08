@@ -118,6 +118,13 @@ body {
     margin: 0 -20px;
 }
 
+.catalog__loader {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 .catalog__card {
     display: block;
     width: 250px;

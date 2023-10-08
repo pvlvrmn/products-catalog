@@ -11,6 +11,7 @@ function Catalog() {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState({page: 1, pageSize: 12})
   const [totalSize, setTotalSize] = useState(100);
+  const [isLoading, setLoading] = useState(true);
   const isMenuShow = useSelector((state) => state.menu.isMenuShow);
   const currCategory = useSelector((state) => state.category.category);
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function Catalog() {
     getProducts(page.page, currCategory).then(res => {
       setProducts(res.products);
       setTotalSize(res.total);
+      setLoading(false)
     });
   }, [currCategory]);
 
@@ -47,10 +49,11 @@ function Catalog() {
     <div className={`${!isMenuShow ? 'catalog__wrapper__wide' : 'catalog__wrapper__narrow'} catalog__wrapper`}>
       <h1>{currCategory && currCategory === 'All' ? 'Catalog' : `Catalog of ${currCategory}`}</h1>
       <div className='catalog__container'>
-        {products && products.map(x => <Card type='action' onClick={() => handleClick(x.id)} className='catalog__card' key={x.id}><CatalogCard product={x}/></Card>)}
+        {isLoading && <div className='catalog__loader'><Loader size='l'/></div>}
+        {!isLoading && products && products.map(x => <Card type='action' onClick={() => handleClick(x.id)} className='catalog__card' key={x.id}><CatalogCard product={x}/></Card>)}
       </div>
       <div className='catalog__pagination'>
-        {totalSize >= page.pageSize ? <Pagination compact={false} page={page.page} pageSize={page.pageSize} total={totalSize} onUpdate={handleUpdate} /> : ''}
+        {!isLoading && totalSize >= page.pageSize ? <Pagination compact={false} page={page.page} pageSize={page.pageSize} total={totalSize} onUpdate={handleUpdate} /> : ''}
       </div>
     </div>
   )
