@@ -6,11 +6,14 @@ import {searchAutocomplete} from "../../api";
 import {Bars} from "@gravity-ui/icons"
 import {useDispatch, useSelector} from "react-redux";
 import {toggle} from "../../slices/menuSlice.ts";
+import {set} from "../../slices/categorySlice.ts";
+import {useNavigate} from "react-router-dom";
 
 function Header() {
   const [query, setQuery] = useState('');
   const [suggest, setSuggest] = useState([]);
   const timerDebounceRef = useRef();
+  const navigate = useNavigate();
 
   const isMenuShow = useSelector((state) => state.menu.isMenuShow);
   const dispatch = useDispatch();
@@ -37,10 +40,10 @@ function Header() {
 
   return (
     <header className='header__wrapper'>
-      <div className='header__bars'>
-        <Bars onClick={() => dispatch(toggle())}/>
+      <div className='header__bars' onClick={() => dispatch(toggle())}>
+        <Bars/>
       </div>
-      <div className='header__title'>
+      <div className='header__title' onClick={() => {navigate('/'); dispatch(set('All'))}}>
         <Text variant="display-1" color="inherit" ellipsis>Products Shop</Text>
       </div>
 
