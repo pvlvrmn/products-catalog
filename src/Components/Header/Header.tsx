@@ -12,21 +12,21 @@ import {useNavigate} from "react-router-dom";
 function Header() {
   const [query, setQuery] = useState<string>('');
   const [suggest, setSuggest] = useState<Array<string>>([]);
-  const timerDebounceRef = useRef();
+  const timerDebounceRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
 
   function handleDebounceSearch(e: React.FormEvent<HTMLInputElement>){
-    setQuery(e.target.value);
-    if(e.target.value !== '') {
+    const input = e.target as HTMLInputElement;
+    setQuery(input.value);
+    if(input.value !== '') {
       if(timerDebounceRef.current){
         clearTimeout(timerDebounceRef.current);
       }
       timerDebounceRef.current = setTimeout(() => {
-        searchAutocomplete(e.target.value).then(val => {
-          const tmp = [];
-          val.map(x => {
+        searchAutocomplete(input.value).then(val => {
+          const tmp:Array<string> = [];
+          val.map((x: {title: string}) => {
             tmp.push(x.title);
           });
           return tmp;
@@ -41,6 +41,7 @@ function Header() {
     getIdBySearchResults(item)
       .then(id => navigate(`/product/${id}`))
       .then(() => setQuery(''))
+      .then(() => setSuggest([]))
   }
 
   return (
@@ -49,7 +50,7 @@ function Header() {
         <Bars/>
       </div>
       <div className='header__title' onClick={() => {navigate('/'); dispatch(set('All'))}}>
-        <Text variant="display-1" color="inherit" ellipsis>Products Shop</Text>
+        <Text variant="display-1" ellipsis>Products Shop</Text>
       </div>
 
       <div className='header__search'>
