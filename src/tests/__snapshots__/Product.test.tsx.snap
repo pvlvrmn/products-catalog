@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Product renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="product__wrapper product__wrapper__narrow"
+      >
+        <div
+          class="images__wrapper"
+        >
+          <div
+            class="images__list"
+          >
+            <ul>
+              <li
+                class="active"
+              >
+                <div>
+                  <img
+                    src=""
+                    width="96"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="images__preview"
+          >
+            <div
+              class="image__background"
+              style="background-image: url();"
+            />
+            <img
+              src=""
+            />
+          </div>
+        </div>
+        <div
+          class="product__info"
+        >
+          <span
+            class="yc-text yc-text_variant_display-3"
+            style="display: block; padding: 10px 0px 5px 0px;"
+          />
+          <span
+            class="yc-text yc-text_variant_subheader-1"
+            style="display: block; padding: 0px 0px 10px 0px;"
+          />
+          <div
+            class="product__rating"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.886.773C7.29-.231 8.71-.231 9.114.773l1.472 3.667 3.943.268c1.08.073 1.518 1.424.688 2.118L12.185 9.36l.964 3.832c.264 1.05-.886 1.884-1.802 1.31L8 12.4l-3.347 2.101c-.916.575-2.066-.26-1.802-1.309l.964-3.832L.783 6.826c-.83-.694-.391-2.045.688-2.118l3.943-.268L6.886.773Z"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="yc-text yc-text_variant_body-2"
+              style="display: block; padding: 0px 0px 10px 0px;"
+            />
+          </div>
+          <span
+            class="yc-text yc-text_variant_body-3"
+            style="display: block; padding: 0px 0px 20px 0px;"
+          />
+          <div
+            class="product__price"
+          >
+            <span
+              class="yc-text yc-text_variant_display-3"
+              style="display: block; padding: 0px 0px 0px 0px;"
+            >
+              $ 
+            </span>
+            <span
+              class="yc-text yc-text_variant_caption-2 product__discount"
+            >
+              -
+              0
+              %
+            </span>
+            <span
+              class="yc-text yc-text_variant_body-1 product__withoutdiscount"
+              style="display: block; padding: 0px 0px 4px 0px;"
+            >
+              / 
+              <s>
+                $ 
+                0
+              </s>
+            </span>
+          </div>
+          <button
+            class="yc-button yc-button_view_action yc-button_size_xl yc-button_pin_round-round"
+            type="button"
+          >
+            <span
+              class="yc-button__text"
+            >
+              Add to cart
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="product__wrapper product__wrapper__narrow"
+    >
+      <div
+        class="images__wrapper"
+      >
+        <div
+          class="images__list"
+        >
+          <ul>
+            <li
+              class="active"
+            >
+              <div>
+                <img
+                  src=""
+                  width="96"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="images__preview"
+        >
+          <div
+            class="image__background"
+            style="background-image: url();"
+          />
+          <img
+            src=""
+          />
+        </div>
+      </div>
+      <div
+        class="product__info"
+      >
+        <span
+          class="yc-text yc-text_variant_display-3"
+          style="display: block; padding: 10px 0px 5px 0px;"
+        />
+        <span
+          class="yc-text yc-text_variant_subheader-1"
+          style="display: block; padding: 0px 0px 10px 0px;"
+        />
+        <div
+          class="product__rating"
+        >
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.886.773C7.29-.231 8.71-.231 9.114.773l1.472 3.667 3.943.268c1.08.073 1.518 1.424.688 2.118L12.185 9.36l.964 3.832c.264 1.05-.886 1.884-1.802 1.31L8 12.4l-3.347 2.101c-.916.575-2.066-.26-1.802-1.309l.964-3.832L.783 6.826c-.83-.694-.391-2.045.688-2.118l3.943-.268L6.886.773Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            class="yc-text yc-text_variant_body-2"
+            style="display: block; padding: 0px 0px 10px 0px;"
+          />
+        </div>
+        <span
+          class="yc-text yc-text_variant_body-3"
+          style="display: block; padding: 0px 0px 20px 0px;"
+        />
+        <div
+          class="product__price"
+        >
+          <span
+            class="yc-text yc-text_variant_display-3"
+            style="display: block; padding: 0px 0px 0px 0px;"
+          >
+            $ 
+          </span>
+          <span
+            class="yc-text yc-text_variant_caption-2 product__discount"
+          >
+            -
+            0
+            %
+          </span>
+          <span
+            class="yc-text yc-text_variant_body-1 product__withoutdiscount"
+            style="display: block; padding: 0px 0px 4px 0px;"
+          >
+            / 
+            <s>
+              $ 
+              0
+            </s>
+          </span>
+        </div>
+        <button
+          class="yc-button yc-button_view_action yc-button_size_xl yc-button_pin_round-round"
+          type="button"
+        >
+          <span
+            class="yc-button__text"
+          >
+            Add to cart
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

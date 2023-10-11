@@ -24,7 +24,7 @@ function Product() {
 
   return (
     <div className={`product__wrapper ${!isMenuShow ? 'product__wrapper__wide' : 'product__wrapper__narrow'}`}>
-      <Images obj={product.title !== '' && product.images}/>
+      <Images obj={product.images}/>
       <div className='product__info'>
         <Text style={{display: 'block', padding: '10px 0 5px 0'}} variant='display-3'>{product.title !== '' && product.title}</Text>
         <Text style={{display: 'block', padding: '0 0 10px 0'}} variant='subheader-1'>{product.title !== '' && product.brand}</Text>

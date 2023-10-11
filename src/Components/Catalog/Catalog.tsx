@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useNavigate} from 'react-router-dom';
 import {getProducts} from "../../api";
 import CatalogCard from "./CatalogCard.tsx";
-import {Card, Pagination, Loader} from "@gravity-ui/uikit";
+import {Card, Pagination, Loader, PaginationProps} from "@gravity-ui/uikit";
 import {useSelector, useDispatch} from "react-redux";
 import {show} from "../../slices/menuSlice.ts";
 
@@ -36,7 +36,7 @@ function Catalog() {
     });
   }, [currCategory]);
 
-  const handleUpdate: PaginationProps['onUpdate'] = (page, pageSize) => {
+  const handleUpdate: PaginationProps['onUpdate'] = (page: number, pageSize: number) => {
     setPage((prevState) => ({...prevState, page, pageSize}));
   }
 

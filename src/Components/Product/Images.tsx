@@ -1,9 +1,9 @@
 import {useState} from "react";
 
-function Images(props) {
+function Images(props: {obj: Array<string>}) {
   const [currimg, setCurrimg] = useState(0)
 
-  const handleClick = (i) => {
+  const handleClick = (i: number) => {
     setCurrimg(i);
   }
 
@@ -11,8 +11,8 @@ function Images(props) {
     <div className='images__wrapper'>
       <div className='images__list'>
         <ul>
-          {props.obj && props.obj.map((x, i) => (
-            <li className={currimg === i ? 'active' : ''}>
+          {props.obj && props.obj.map((x: string, i: number) => (
+            <li className={currimg === i ? 'active' : ''} key={i}>
               <div onClick={() => handleClick(i)}>
                 <img key={i} src={x} width='96'/>
               </div>
