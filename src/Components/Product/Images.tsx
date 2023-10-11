@@ -12,7 +12,7 @@ function Images(props: {obj: Array<string>}) {
       <div className='images__list'>
         <ul>
           {props.obj && props.obj.map((x: string, i: number) => (
-            <li className={currimg === i ? 'active' : ''}>
+            <li className={currimg === i ? 'active' : ''} key={i}>
               <div onClick={() => handleClick(i)}>
                 <img key={i} src={x} width='96'/>
               </div>
