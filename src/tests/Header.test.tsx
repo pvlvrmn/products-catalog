@@ -23,7 +23,7 @@ describe('Header', () => {
     expect(linkElem).toBeInTheDocument();
   });
 
-  it('Header renders correctly', () => {
+  it('Header matches snapshot', () => {
     const tree = render(<Header />)
     expect(tree).toMatchSnapshot();
   });

@@ -24,7 +24,7 @@ describe('Product', () => {
     expect(linkElem).toBeInTheDocument();
   });
 
-  it('Product renders correctly', () => {
+  it('Product matches snapshot', () => {
     const tree = render(<Product />)
     expect(tree).toMatchSnapshot();
   });
