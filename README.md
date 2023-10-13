@@ -2,7 +2,7 @@
 
 This project was built with [DummyJSON API](https://dummyjson.com/).
 
-### [Live Demo](https://pvlvrmn.github.io/products-catalog/)
+### [Live Demo](https://pvlvrmn-products.netlify.app/)
 
 ## Tech stack
 - [React](https://react.dev/)
