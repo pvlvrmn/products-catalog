@@ -40,7 +40,7 @@ function Catalog() {
     setPage((prevState) => ({...prevState, page, pageSize}));
   }
 
-  const handleClick = (id) => {
+  const handleClick = (id: number) => {
     console.log(id);
     navigate(`/product/${id}`);
   }
