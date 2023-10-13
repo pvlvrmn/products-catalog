@@ -1,6 +1,6 @@
 import {Text} from "@gravity-ui/uikit";
 
-function CatalogCard(props) {
+function CatalogCard(props: {product: {title: string, brand: string, price: number, thumbnail: string}}) {
   return (
     <div>
       <div className='card__img' style={{backgroundImage: `url(${props.product.thumbnail})`}}>

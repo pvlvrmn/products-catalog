@@ -5,15 +5,16 @@ import CatalogCard from "./CatalogCard.tsx";
 import {Card, Pagination, Loader, PaginationProps} from "@gravity-ui/uikit";
 import {useSelector, useDispatch} from "react-redux";
 import {show} from "../../slices/menuSlice.ts";
+import {RootState} from "../../slices";
 
 function Catalog() {
   const navigate = useNavigate();
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Array<{id: number, brand: string, title: string, thumbnail: string, price: number}>>([]);
   const [page, setPage] = useState({page: 1, pageSize: 12})
   const [totalSize, setTotalSize] = useState(100);
   const [isLoading, setLoading] = useState(true);
-  const isMenuShow = useSelector((state) => state.menu.isMenuShow);
-  const currCategory = useSelector((state) => state.category.category);
+  const isMenuShow = useSelector((state: RootState) => state.menu.isMenuShow);
+  const currCategory = useSelector((state: RootState) => state.category.category);
   const dispatch = useDispatch();
 
   useEffect(() => {
