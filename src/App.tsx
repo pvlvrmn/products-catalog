@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <Router basename={import.meta.env.DEV ? '/' : '/products-catalog/'}>
+    <Router basename={'/'}>
       <Header/>
       <Categories/>
       <Routes>
