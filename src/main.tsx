@@ -10,7 +10,7 @@ import App from './App.tsx'
 import {store} from './slices/index.ts';
 
 configure({
-  lang: 'ru',
+  lang: 'en',
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
