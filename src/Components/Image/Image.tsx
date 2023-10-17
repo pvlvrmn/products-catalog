@@ -11,7 +11,7 @@ function Image(props: {src: string}) {
 
   return (
     <div className="card__img">
-      {!loaded && <Skeleton style={{height: '100%', width: '100%', 'flex-shrink': 0}}/>}
+      {!loaded && <Skeleton style={{height: '100%', width: '100%'}}/>}
       <img
         alt="Dog"
         src={src}
