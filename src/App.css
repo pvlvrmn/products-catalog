@@ -73,6 +73,7 @@ body {
     top: 70px;
     max-height: 200px;
     overflow-y: scroll;
+    z-index: 100;
 }
 
 .header__suggest .yc-list__item {
