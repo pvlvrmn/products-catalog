@@ -1,4 +1,5 @@
 import {useState} from "react";
+import Image from "../Image/Image.tsx";
 
 function Images(props: {obj: Array<string>}) {
   const [currimg, setCurrimg] = useState(0)
@@ -14,7 +15,7 @@ function Images(props: {obj: Array<string>}) {
           {props.obj && props.obj.map((x: string, i: number) => (
             <li className={currimg === i ? 'active' : ''} key={i}>
               <div onClick={() => handleClick(i)}>
-                <img key={i} src={x} width='96'/>
+                <Image key={i} src={x} width='96'/>
               </div>
             </li>
           ))}
@@ -22,7 +23,7 @@ function Images(props: {obj: Array<string>}) {
       </div>
       <div className='images__preview'>
         <div className='image__background' style={{backgroundImage: `url(${props.obj && props.obj[currimg]})`}}></div>
-        <img src={props.obj && props.obj[currimg]}/>
+        <Image src={props.obj && props.obj[currimg]}/>
       </div>
     </div>
   )
