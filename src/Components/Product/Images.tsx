@@ -15,7 +15,7 @@ function Images(props: {obj: Array<string>}) {
           {props.obj && props.obj.map((x: string, i: number) => (
             <li className={currimg === i ? 'active' : ''} key={i}>
               <div onClick={() => handleClick(i)}>
-                <Image key={i} src={x} width='96'/>
+                <Image src={x} alt={'Image of product #'+(i+1)}/>
               </div>
             </li>
           ))}
@@ -23,7 +23,7 @@ function Images(props: {obj: Array<string>}) {
       </div>
       <div className='images__preview'>
         <div className='image__background' style={{backgroundImage: `url(${props.obj && props.obj[currimg]})`}}></div>
-        <Image src={props.obj && props.obj[currimg]}/>
+        <Image src={props.obj && props.obj[currimg]} alt={'Image of product'}/>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ function CatalogCard(props: {product: {title: string, brand: string, price: numb
   return (
     <div>
       <div className='card__imgwrapper'>
-      <Image src={props.product.thumbnail}/>
+      <Image src={props.product.thumbnail} alt={props.product.title}/>
       </div>
       <div className='card__description'>
         <Text style={{display: 'block', padding: '10px 0 5px 0'}} variant='subheader-3'>{props.product.title}</Text>
